@@ -8,76 +8,59 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #000;
+            color: #fff;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container {
+        .content {
             padding: 20px;
-            max-width: 600px;
         }
 
-        h1 {
-            font-size: clamp(2rem, 8vw, 4rem);
-            letter-spacing: 5px;
+        .status {
+            font-size: 12px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 10px;
-            border-left: 5px solid #ffcc00;
-            padding-left: 15px;
-            display: inline-block;
+            color: #888;
+            margin-bottom: 20px;
+            display: block;
         }
 
-        p.subtitle {
-            font-size: clamp(1rem, 4vw, 1.2rem);
-            letter-spacing: 2px;
-            opacity: 0.7;
+        .main-text {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 1px;
             margin-bottom: 40px;
-        }
-
-        .contact-box {
-            margin-top: 30px;
-            padding: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.05);
+            color: #eee;
         }
 
         .contact-link {
-            color: #ffcc00;
+            font-size: 14px;
+            color: #fff;
             text-decoration: none;
-            font-weight: bold;
-            display: block;
-            margin-top: 5px;
-            transition: 0.3s;
+            padding-bottom: 2px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: border-color 0.3s ease;
         }
 
         .contact-link:hover {
-            letter-spacing: 1px;
-            color: #ffee00;
-        }
-
-        @media (max-width: 600px) {
-            h1 { border-left: none; border-bottom: 4px solid #ffcc00; padding-left: 0; padding-bottom: 10px; }
+            border-bottom: 1px solid #fff;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>CALISTHÉNIE NICE</h1>
-        <p class="subtitle">PROCHAINEMENT À NICE. RESTEZ CONNECTÉS.</p>
-        
-        <div class="contact-box">
-            <span style="font-size: 0.8em; opacity: 0.6;">UNE QUESTION ?</span>
-            <a href="mailto:contact@calisthenienice.fr" class="contact-link">
-                contact@calisthenienice.fr
-            </a>
-        </div>
+    <div class="content">
+        <span class="status">Calisthénie Nice</span>
+        <p class="main-text">Prochainement à Nice. Restez connectés.</p>
+        <a href="mailto:contact@calisthenienice.fr" class="contact-link">
+            contact@calisthenienice.fr
+        </a>
     </div>
 </body>
 </html>
