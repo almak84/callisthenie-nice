@@ -72,5 +72,38 @@
             <a href="/concours" class="btn-open">Découvrir / Inscriptions</a>
         </div>
     </div>
+        <div id="music-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; display: flex; align-items: center; background: rgba(0,0,0,0.8); border: 1px solid #ffd700; padding: 10px; border-radius: 50px;">
+    
+        <span id="music-status" style="color: #ffd700; font-size: 10px; font-family: 'Arial Black', sans-serif; margin-right: 10px; text-transform: uppercase; letter-spacing: 1px;">OFF</span>
+    
+        <button onclick="toggleMusic()" style="background: #ffd700; border: none; border-radius: 50%; width: 30px; height: 30px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; outline: none;">
+            <span id="music-icon">▶</span>
+        </button>
+
+        <audio id="bgAudio" loop>
+            <source src="bg-music.mp3" type="audio/mpeg">
+            Ton navigateur ne supporte pas l'audio.
+        </audio>
+    </div>
+
+    <script>
+        var audio = document.getElementById("bgAudio");
+        var statusText = document.getElementById("music-status");
+        var icon = document.getElementById("music-icon");
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                statusText.innerText = "ON";
+                icon.innerText = "II"; // Symbole Pause
+                statusText.style.color = "#fff";
+            } else {
+                audio.pause();
+                statusText.innerText = "OFF";
+                icon.innerText = "▶"; // Symbole Play
+                statusText.style.color = "#ffd700";
+            }
+        }
+    </script>
 </body>
 </html>
